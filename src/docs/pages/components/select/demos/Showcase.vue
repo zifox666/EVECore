@@ -27,13 +27,13 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '基础', en: 'Basic' }" :hint="{ zh: '方向键、输入首字母', en: 'Arrows, type-ahead' }">
+  <DemoGroup :label="{ zh: '基础', en: 'Basic' }">
     <div style="width: 200px"><EveSelect v-model="hub" :options="hubs" placeholder="Trade hub" /></div>
     <div style="width: 200px"><EveSelect v-model="empty" :options="hubs" placeholder="Trade hub" /></div>
     <span class="eve-detail eve-text-secondary">{{ hub }} · {{ empty ?? 'null' }}</span>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :row="false">
+  <DemoGroup :label="{ zh: '状态', en: 'States' }" :row="false">
     <div style="display: flex; flex-wrap: wrap; gap: 8px">
       <div v-for="s in states" :key="s" style="width: 160px">
         <EveSelect model-value="jita" :options="hubs" :data-eve-state="s === 'normal' ? undefined : s" />
@@ -44,7 +44,7 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }" :hint="{ zh: '多选项滚动 · 长文本省略', en: 'Scrolling list · ellipsis' }">
+  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }">
     <div style="width: 200px"><EveSelect v-model="many" :options="systems" /></div>
     <div style="width: 200px"><EveSelect v-model="lng" :options="long" /></div>
     <div style="width: 200px"><EveSelect :model-value="null" :options="[]" placeholder="No stations" /></div>

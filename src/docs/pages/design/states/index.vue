@@ -4,7 +4,7 @@ import { CodeBlock, DocPage, DocSection, L, Rules } from '../../../kit';
 const states = [
   { k: 'normal', zh: '默认面', en: 'Resting face' },
   { k: 'hover', zh: '背景变亮、边框变亮、出现辉光', en: 'Fill and border brighten, glow appears' },
-  { k: 'press', zh: '瞬间闪白 #EAEAEA，文字变深', en: 'Instant #EAEAEA flash, dark text' },
+  { k: 'press', zh: '瞬间闪白 #B4BEC2，文字变深', en: 'Instant #B4BEC2 flash, dark text' },
   { k: 'selected', zh: '青色底 + 边框；列表用 bg-selected', en: 'Cyan fill and border; lists use bg-selected' },
   { k: 'disabled', zh: '保持 normal 面，文字 text-disabled，无 hover', en: 'Normal face, text-disabled, no hover' },
   { k: 'focus', zh: '1px primary-light 轮廓，无外发光圈', en: '1px primary-light outline, no halo' },
@@ -24,7 +24,6 @@ const { pressed, handlers } = usePressFlash(); // pressed stays true ~150ms afte
 <template>
   <DocPage>
     <DocSection id="states" zh="六种状态" en="The six states">
-      <p><L zh="每个交互组件都必须定义 Normal / Hover / Press；以下用类名模拟，不依赖具体组件。" en="Every interactive component defines Normal, Hover and Press. These swatches simulate states with classes, independent of any component." /></p>
       <div class="grid">
         <div v-for="s in states" :key="s.k" class="cell">
           <span class="sw" :class="`s-${s.k}`" :tabindex="s.k === 'disabled' ? -1 : 0">{{ s.k }}</span>
@@ -35,7 +34,6 @@ const { pressed, handlers } = usePressFlash(); // pressed stays true ~150ms afte
     </DocSection>
 
     <DocSection id="lights-up" zh="“亮起来”" en="Lights up">
-      <p><L zh="反馈是变亮，不是变暗、位移或阴影：背景更亮、边框更亮、文字升到 highlighted，需要时加辉光。下面两行可实际悬停。" en="Feedback means getting brighter, never darker, moved or shadowed: brighter fill, brighter border, text up to highlighted, glow when needed. Hover the rows below." /></p>
       <div class="rows">
         <div class="r">Tritanium <span class="eve-mono">5.42</span></div>
         <div class="r r-sel">Pyerite <span class="eve-mono">11.80</span></div>
@@ -44,7 +42,6 @@ const { pressed, handlers } = usePressFlash(); // pressed stays true ~150ms afte
     </DocSection>
 
     <DocSection id="press" zh="按下闪白" en="Press flash">
-      <p><L zh="按下即白（#EAEAEA），松开约 150ms 回落。这是 EVE 按钮手感的核心，不可省略。点击试一下。" en="White the instant it is pressed (#EAEAEA), released over ~150ms. It is the core of the EVE button feel and is never optional. Click to try." /></p>
       <button class="sw s-hover try" type="button">Undock</button>
       <CodeBlock :code="flash" lang="ts" />
     </DocSection>

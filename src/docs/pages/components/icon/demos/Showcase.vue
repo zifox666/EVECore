@@ -21,7 +21,7 @@ async function copy(name: string) {
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '命名与尺寸', en: 'Named and sized' }" :hint="{ zh: '16 · 24 · 32px', en: '16 · 24 · 32px' }">
+  <DemoGroup :label="{ zh: '命名与尺寸', en: 'Named and sized' }">
     <EveIcon name="wallet" title="Wallet" />
     <EveIcon name="wallet" :size="24" title="Wallet" />
     <EveIcon name="wallet" :size="32" title="Wallet" />
@@ -30,7 +30,7 @@ async function copy(name: string) {
     <EveIcon name="warning" :size="32" />
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '图标库', en: 'Gallery' }" :hint="{ zh: '点击复制类名', en: 'Click to copy the class' }" :row="false">
+  <DemoGroup :label="{ zh: '图标库', en: 'Gallery' }" :row="false">
     <input
       v-model="query"
       class="ig-filter"

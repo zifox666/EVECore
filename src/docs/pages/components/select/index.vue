@@ -38,13 +38,6 @@ const props: PropRow[] = [
     <DocSection id="usage" zh="用法" en="Usage">
       <CodeBlock :code="usage" />
       <PropsTable :rows="props" />
-      <p><L zh="键盘：↑↓ / Home / End 移动，Enter / 空格选择，Esc 关闭，支持首字母跳转。弹层挂载到 body，空间不足时向上翻转。" en="Keyboard: ↑↓ / Home / End move, Enter / Space choose, Escape closes, type-ahead jumps. The popup is teleported to body and flips upward when short of space." /></p>
-      <p>
-        <L
-          zh="文档与测试可用 data-eve-state=&quot;hover|press|focus&quot; 强制显示某个状态。"
-          en="Docs and tests can force a state with data-eve-state=&quot;hover|press|focus&quot;."
-        />
-      </p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

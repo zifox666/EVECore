@@ -54,7 +54,7 @@ It is a dense tool: 14px body, 32px controls, 24px maximum regular gap.
 Every interactive element defines Normal, Hover, Press, Disabled and Focus.
 
 - Hover lights up: brighter fill, brighter border (`--eve-border-primary-light`), optional inset glow.
-- Press flashes white: fill and border `--eve-bg-press` (#EAEAEA), text `--eve-text-on-press`, instantly; release after 150ms (`usePressFlash`). Never remove it.
+- Press flashes white: fill and border `--eve-bg-press` (#B4BEC2), text `--eve-text-on-press`, instantly; release after 150ms (`usePressFlash`). Never remove it.
 - Selected: `--eve-bg-selected` rows, primary indicators, vertical glow line on navigation.
 - Disabled: keep the normal face, text `--eve-text-disabled`, no hover, `cursor: not-allowed`.
 - Focus: `:focus-visible` only — a 1px `--eve-border-primary-light` line, no ring halo.
@@ -68,7 +68,7 @@ Every interactive element defines Normal, Hover, Press, Disabled and Focus.
 
 ## 8. Icons
 
-- 16px, monochrome, `currentColor`. Prefer the eve-icons set (CCP third-party licence) in `src/assets/icons/eve/` (UnoCSS `i-eve-<name>` for static use, `EveIcon` for dynamic names);
+- 16px, monochrome, `currentColor`. Prefer the eve-icons set in `src/assets/icons/eve/` (UnoCSS `i-eve-<name>` for static use, `EveIcon` for dynamic names);
   Tabler via UnoCSS (`i-tabler-*`) for generic controls (search, close, refresh). Class names must be literal strings.
 - Icon colour follows text: secondary at rest, highlighted on hover, primary when active.
 

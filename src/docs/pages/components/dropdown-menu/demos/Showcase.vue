@@ -33,7 +33,7 @@ const longItems: MenuItem[] = [
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '触发按钮', en: 'Trigger button' }" :hint="{ zh: '点击、Enter、Space 或 ↓', en: 'Click, Enter, Space or ↓' }">
+  <DemoGroup :label="{ zh: '触发按钮', en: 'Trigger button' }">
     <EveDropdownMenu :items="items" @select="last = $event">
       <template #default="{ attrs }">
         <EveButton v-bind="attrs" icon="i-eve-ship-hangar">Rifter</EveButton>
@@ -42,7 +42,7 @@ const longItems: MenuItem[] = [
     <span class="eve-detail eve-text-secondary eve-num">selected: {{ last }}</span>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '图标触发 · 右对齐', en: 'Icon trigger · align end' }" :hint="{ zh: 'v-model:open 受控', en: 'Controlled with v-model:open' }">
+  <DemoGroup :label="{ zh: '图标触发 · 右对齐', en: 'Icon trigger · align end' }">
     <EveDropdownMenu v-model:open="open" :items="items" align="end" @select="last = $event">
       <template #default="{ attrs, open: isOpen }">
         <EveIconButton v-bind="attrs" icon="i-eve-settings" label="Ship menu" :active="isOpen" />
@@ -51,7 +51,7 @@ const longItems: MenuItem[] = [
     <span class="eve-detail eve-text-secondary">{{ open ? 'open' : 'closed' }}</span>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '长标签', en: 'Long labels' }" :hint="{ zh: '至少与触发元素等宽', en: 'At least as wide as the trigger' }">
+  <DemoGroup :label="{ zh: '长标签', en: 'Long labels' }">
     <EveDropdownMenu :items="longItems">
       <template #default="{ attrs }"><EveButton v-bind="attrs" icon="i-tabler-chevron-down">Orders</EveButton></template>
     </EveDropdownMenu>

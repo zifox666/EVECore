@@ -35,18 +35,6 @@ const props: PropRow[] = [
     <DocSection id="usage" zh="用法" en="Usage">
       <CodeBlock :code="usage" />
       <PropsTable :rows="props" />
-      <p>
-        <L
-          zh="默认插槽为按钮文字。其余 attribute 与事件（click 等）透传到原生 <button>。"
-          en="The default slot is the label. Other attributes and events (click, …) fall through to the native <button>."
-        />
-      </p>
-      <p>
-        <L
-          zh="文档与测试可用 data-eve-state=&quot;hover|press|focus&quot; 强制显示某个状态。"
-          en="Docs and tests can force a state with data-eve-state=&quot;hover|press|focus&quot;."
-        />
-      </p>
     </DocSection>
 
 

@@ -33,12 +33,6 @@ const vars: PropRow[] = [
     </DocSection>
 
     <DocSection id="usage" zh="用法" en="Usage">
-      <p>
-        <L
-          zh="clip-path 会把 CSS border 一起裁掉，所以 Frame 用两层：外层是边框色并裁切，内层 ::before 内缩 1px 填底色并以 (切角 − 0.4px) 裁切，让斜边仍是 1px。颜色通过 CSS 变量传入，可以直接做 transition。"
-          en="clip-path clips a CSS border away, so Frame uses two layers: the outer one is the border colour, clipped; the inner ::before is inset 1px, filled, and clipped at (cut − 0.4px) so the diagonal stays 1px. Colours are CSS variables, so they transition."
-        />
-      </p>
       <CodeBlock :code="usage" />
       <PropsTable :rows="props" />
       <PropsTable :rows="vars" />

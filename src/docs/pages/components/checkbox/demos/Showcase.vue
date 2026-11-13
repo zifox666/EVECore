@@ -10,13 +10,13 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '基础', en: 'Basic' }" :hint="{ zh: '点击标签也会切换', en: 'Label click toggles too' }">
+  <DemoGroup :label="{ zh: '基础', en: 'Basic' }">
     <EveCheckbox v-model="autopilot">Use autopilot</EveCheckbox>
     <EveCheckbox :model-value="false">Warp to 0</EveCheckbox>
     <EveCheckbox :model-value="false" />
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '多选组', en: 'Group' }" :hint="{ zh: '数组 v-model + value；全选为半选', en: 'Array model; parent is indeterminate' }" :row="false">
+  <DemoGroup :label="{ zh: '多选组', en: 'Group' }" :row="false">
     <div style="display: grid; gap: 8px">
       <EveCheckbox
         :model-value="picked.length === hangars.length"
@@ -32,22 +32,22 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '未选中状态（静态）', en: 'Unchecked states (static)' }">
+  <DemoGroup wide :label="{ zh: '未选中状态', en: 'Unchecked states' }">
     <EveCheckbox v-for="s in states" :key="s" :model-value="false" :data-eve-state="s === 'normal' ? undefined : s">{{ s }}</EveCheckbox>
     <EveCheckbox :model-value="false" disabled>disabled</EveCheckbox>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '选中状态（静态）', en: 'Checked states (static)' }">
+  <DemoGroup wide :label="{ zh: '选中状态', en: 'Checked states' }">
     <EveCheckbox v-for="s in states" :key="s" :model-value="true" :data-eve-state="s === 'normal' ? undefined : s">{{ s }}</EveCheckbox>
     <EveCheckbox :model-value="true" disabled>disabled</EveCheckbox>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '半选状态（静态）', en: 'Indeterminate states (static)' }">
+  <DemoGroup wide :label="{ zh: '半选状态', en: 'Indeterminate states' }">
     <EveCheckbox v-for="s in states" :key="s" :model-value="false" indeterminate :data-eve-state="s === 'normal' ? undefined : s">{{ s }}</EveCheckbox>
     <EveCheckbox :model-value="false" indeterminate disabled>disabled</EveCheckbox>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '长标签', en: 'Long label' }" :row="false">
+  <DemoGroup wide :label="{ zh: '长标签', en: 'Long label' }" :row="false">
     <div style="max-width: 260px">
       <EveCheckbox :model-value="true">Automatically reprocess Tritanium, Pyerite and Mexallon when docked in Jita</EveCheckbox>
     </div>

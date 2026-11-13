@@ -32,13 +32,6 @@ const props: PropRow[] = [
     <DocSection id="usage" zh="用法" en="Usage">
       <CodeBlock :code="usage" />
       <PropsTable :rows="props" />
-      <p><L zh="空格切换；半选状态点击后变为选中。" en="Space toggles; clicking an indeterminate box makes it checked." /></p>
-      <p>
-        <L
-          zh="文档与测试可用 data-eve-state=&quot;hover|press|focus&quot; 强制显示某个状态。"
-          en="Docs and tests can force a state with data-eve-state=&quot;hover|press|focus&quot;."
-        />
-      </p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

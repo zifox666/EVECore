@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT -->
 <!--
   EveCheckbox — 16px box with four 2px corner cuts, 1px border-grey-light.
-  Hover: border + 2px glow turn primary. Press: fill flashes #EAEAEA. Check icon is primary. Supports indeterminate.
+  Hover: border + 2px glow turn primary. Press: fill flashes #B4BEC2. Check icon is primary. Supports indeterminate.
   Docs/tests can force a state with data-eve-state="hover|press|focus" on the root.
   Requires: lib/utils.ts
 -->

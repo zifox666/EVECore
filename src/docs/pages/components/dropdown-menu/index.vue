@@ -41,13 +41,6 @@ const slots: PropRow[] = [
       <PropsTable :rows="props" />
       <PropsTable :rows="events" kind="events" />
       <PropsTable :rows="slots" kind="slots" />
-      <p>
-        <L
-          zh="点击、Enter、Space 或 ↓ 打开；关闭后焦点回到触发元素。菜单项键盘操作同右键菜单。"
-          en="Click, Enter, Space or ↓ opens it; focus returns to the trigger on close. Item keyboard handling matches the context menu."
-        />
-      </p>
-      <p><L zh="item 的 icon 可以是 Iconify 类（i-eve-info）或不带 i- 前缀的 EVE 图标名（info）。" en="An item's icon is an Iconify class (i-eve-info) or an EVE icon name without the i- prefix (info)." /></p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

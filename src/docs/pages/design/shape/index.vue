@@ -41,7 +41,6 @@ const frame = `<!-- clip-path also clips the border, so a bordered cut is two la
     </DocSection>
 
     <DocSection id="cuts" zh="切角" en="Cut corners">
-      <p><L zh="切角是 EVE 的标志几何，代替圆角：只切一个或两个角，尺寸固定为 --eve-cut（9px）。" en="The cut corner is the signature EVE geometry and replaces rounding: one or two corners only, fixed at --eve-cut (9px)." /></p>
       <div class="row">
         <div class="cell"><div class="cut eve-cut-br" /><span class="eve-mono">.eve-cut-br</span></div>
         <div class="cell"><div class="cut eve-cut-bl" /><span class="eve-mono">.eve-cut-bl</span></div>
@@ -53,8 +52,6 @@ const frame = `<!-- clip-path also clips the border, so a bordered cut is two la
     </DocSection>
 
     <DocSection id="double-layer" zh="双层技术" en="Double-layer technique">
-      <p><L zh="clip-path 会把 border 一起裁掉，所以带边框的切角用两层：外层是边框色加 clip-path，内层 inset 1px，填充色加同样的 clip-path，切角尺寸减 0.4px 以对齐斜边。EveFrame 已封装此做法。"
-            en="clip-path clips the border too, so a bordered cut uses two layers: an outer one in the border colour with clip-path, and an inner one inset 1px in the fill colour with the same clip-path, the cut reduced by 0.4px to align the diagonal. EveFrame wraps this." /></p>
       <div class="row">
         <div class="cell">
           <div class="outer"><div class="inner"><L zh="外层 + 内层" en="Outer + inner" /></div></div>

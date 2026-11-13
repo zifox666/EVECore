@@ -11,7 +11,7 @@ const states = ['normal', 'hover', 'focus'] as const;
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '实时过滤', en: 'Live filter' }" :hint="{ zh: '输入后出现清除按钮；Esc 清除', en: 'Clear button appears; Esc clears' }" :row="false">
+  <DemoGroup :label="{ zh: '实时过滤', en: 'Live filter' }" :row="false">
     <div style="display: grid; gap: 8px; max-width: 320px">
       <EveSearchField v-model="q" placeholder="Search systems" @clear="cleared++" />
       <span class="eve-detail eve-text-secondary eve-num">
@@ -20,7 +20,7 @@ const states = ['normal', 'hover', 'focus'] as const;
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :row="false">
+  <DemoGroup :label="{ zh: '状态', en: 'States' }" :row="false">
     <div style="display: grid; gap: 8px; max-width: 320px">
       <EveSearchField
         v-for="s in states"
@@ -34,7 +34,7 @@ const states = ['normal', 'hover', 'focus'] as const;
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }" :hint="{ zh: '长查询', en: 'Long query' }" :row="false">
+  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }" :row="false">
     <div style="max-width: 240px">
       <EveSearchField model-value="Tritanium Pyerite Mexallon Isogen Nocxium Zydrine Megacyte" />
     </div>

@@ -62,7 +62,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '市场订单', en: 'Market orders' }" :hint="{ zh: '点表头排序，点行选中', en: 'Click headers to sort, rows to select' }" :row="false">
+  <DemoGroup :label="{ zh: '市场订单', en: 'Market orders' }" :row="false">
     <EveTable v-model:sort="sort" v-model:selected="selected" :columns="columns" :rows="rows" row-key="id">
       <template #cell-system="{ row }"><EveSystemChip :name="row.system" :security="row.security" /></template>
       <template #cell-quantity="{ value }">{{ value.toLocaleString('en-US') }}</template>
@@ -71,14 +71,14 @@ onMounted(() => {
     </EveTable>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '多选', en: 'Multiple selection' }" :hint="{ zh: '再点一次取消', en: 'Click again to deselect' }" :row="false">
+  <DemoGroup :label="{ zh: '多选', en: 'Multiple selection' }" :row="false">
     <EveTable v-model:sort="multiSort" v-model:selected="multiSelected" multiple :columns="small" :rows="rows" row-key="id">
       <template #cell-quantity="{ value }">{{ value.toLocaleString('en-US') }}</template>
       <template #cell-price="{ value }"><EveIsk :value="value" :suffix="false" /></template>
     </EveTable>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :hint="{ zh: '行：普通 · 悬停 · 按下 · 聚焦；表头：悬停 · 按下 · 聚焦', en: 'Rows: normal · hover · press · focus; headers: hover · press · focus' }" :row="false">
+  <DemoGroup :label="{ zh: '状态', en: 'States' }" :row="false">
     <div ref="matrix">
       <EveTable :columns="small" :rows="rows.slice(0, 4)" row-key="id">
         <template #cell-quantity="{ value }">{{ value.toLocaleString('en-US') }}</template>
@@ -87,7 +87,7 @@ onMounted(() => {
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '长名称与大数值', en: 'Long names and big numbers' }" :hint="{ zh: '文字截断，数字横向滚动', en: 'Text truncates, numbers scroll' }" :row="false">
+  <DemoGroup :label="{ zh: '长名称与大数值', en: 'Long names and big numbers' }" :row="false">
     <div style="max-width: 420px">
       <EveTable :columns="columns" :rows="longRows" row-key="id">
         <template #cell-system="{ row }"><EveSystemChip :name="row.system" :security="row.security" /></template>

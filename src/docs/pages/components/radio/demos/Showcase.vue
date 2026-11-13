@@ -11,7 +11,7 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '纵向', en: 'Vertical' }" :hint="{ zh: '方向键移动并选中', en: 'Arrow keys move and select' }">
+  <DemoGroup :label="{ zh: '纵向', en: 'Vertical' }">
     <EveRadioGroup v-model="route" label="Route">
       <EveRadio value="safe">Safer</EveRadio>
       <EveRadio value="short">Shorter</EveRadio>
@@ -21,7 +21,7 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
     <span class="eve-detail eve-text-secondary" style="margin-left: 24px">{{ route }}</span>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '横向', en: 'Horizontal' }">
+  <DemoGroup wide :label="{ zh: '横向', en: 'Horizontal' }">
     <EveRadioGroup v-model="space" direction="horizontal" label="Space">
       <EveRadio value="high">High-sec</EveRadio>
       <EveRadio value="low">Low-sec</EveRadio>
@@ -29,21 +29,21 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
     </EveRadioGroup>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '未选中状态（静态）', en: 'Unchecked states (static)' }">
+  <DemoGroup wide :label="{ zh: '未选中状态', en: 'Unchecked states' }">
     <EveRadioGroup :model-value="undefined" direction="horizontal">
       <EveRadio v-for="s in states" :key="s" value="x" :data-eve-state="s === 'normal' ? undefined : s">{{ s }}</EveRadio>
       <EveRadio value="x" disabled>disabled</EveRadio>
     </EveRadioGroup>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '选中状态（静态）', en: 'Checked states (static)' }">
+  <DemoGroup wide :label="{ zh: '选中状态', en: 'Checked states' }">
     <EveRadioGroup model-value="x" direction="horizontal">
       <EveRadio v-for="s in states" :key="s" value="x" :data-eve-state="s === 'normal' ? undefined : s">{{ s }}</EveRadio>
       <EveRadio value="x" disabled>disabled</EveRadio>
     </EveRadioGroup>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '整组禁用与无选中', en: 'Disabled group and no selection' }">
+  <DemoGroup wide :label="{ zh: '整组禁用与无选中', en: 'Disabled group and no selection' }">
     <EveRadioGroup model-value="high" disabled>
       <EveRadio value="high">Amarr</EveRadio>
       <EveRadio value="low">Caldari</EveRadio>
@@ -54,7 +54,7 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
     </EveRadioGroup>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '长标签', en: 'Long label' }" :row="false">
+  <DemoGroup wide :label="{ zh: '长标签', en: 'Long label' }" :row="false">
     <div style="max-width: 260px">
       <EveRadioGroup model-value="a">
         <EveRadio value="a">Deliver Tritanium, Pyerite and Mexallon to the Perimeter trade hub</EveRadio>

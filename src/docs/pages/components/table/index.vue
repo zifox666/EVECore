@@ -49,24 +49,6 @@ const slots: PropRow[] = [
       <PropsTable :rows="props" />
       <PropsTable :rows="events" kind="events" />
       <PropsTable :rows="slots" kind="slots" />
-      <p>
-        <L
-          zh="列宽可通过表头之间的分隔线拖拽调整（也可聚焦后用左右方向键）。数字列自动右对齐并使用等宽字体。"
-          en="Drag the separator between headers to resize a column (or focus it and use the arrow keys). Numeric columns are right-aligned and mono."
-        />
-      </p>
-      <p>
-        <L
-          zh="表格最小宽度等于各列宽之和：容器太窄时横向滚动，数字列绝不截断。未设置 width 的列按 120px 计。"
-          en="The table's min-width is the sum of its column widths: in a narrow container it scrolls horizontally and numbers are never truncated. Columns without a width count as 120px."
-        />
-      </p>
-      <p>
-        <L
-          zh="文档与测试可在行或可排序表头上使用 data-eve-state=&quot;hover|press|focus&quot; 强制显示状态。"
-          en="Docs and tests can force a state with data-eve-state=&quot;hover|press|focus&quot; on rows or sortable headers."
-        />
-      </p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

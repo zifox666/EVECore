@@ -1,3 +1,10 @@
+/* Triglavian: docs display only. Not part of the library bundle or the npm package. */
+@font-face {
+  font-family: 'Triglavian';
+  src: url('./assets/fonts/Triglavian.otf') format('opentype');
+  font-display: swap;
+}
+
 /* Docs-site chrome only. Components never depend on this file. */
 .docs {
   display: grid;

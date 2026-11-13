@@ -10,7 +10,7 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '基础', en: 'Basic' }" :hint="{ zh: '拖动或用方向键', en: 'Drag or use arrow keys' }" :row="false">
+  <DemoGroup :label="{ zh: '基础', en: 'Basic' }" :row="false">
     <div style="display: grid; gap: 8px; max-width: 320px">
       <div style="display: flex; align-items: center; gap: 12px">
         <EveSlider v-model="speed" :step="5" label="Speed" />
@@ -27,14 +27,14 @@ const states = ['normal', 'hover', 'press', 'focus'] as const;
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :hint="{ zh: 'press = 拖动中', en: 'press = dragging' }" :row="false">
+  <DemoGroup :label="{ zh: '状态', en: 'States' }" :row="false">
     <div style="display: grid; gap: 4px; max-width: 320px">
       <EveSlider v-for="s in states" :key="s" :model-value="60" :data-eve-state="s === 'normal' ? undefined : s" :label="s" />
       <EveSlider :model-value="60" disabled label="disabled" />
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }" :hint="{ zh: '最小 · 最大 · 窄宽度', en: 'Min · max · narrow' }" :row="false">
+  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }" :row="false">
     <div style="display: grid; gap: 4px; max-width: 320px">
       <EveSlider :model-value="0" label="Min" />
       <EveSlider :model-value="100" label="Max" />

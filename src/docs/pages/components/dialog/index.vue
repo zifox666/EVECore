@@ -45,12 +45,6 @@ const slots: PropRow[] = [
       <PropsTable :rows="props" />
       <PropsTable :rows="events" kind="events" />
       <PropsTable :rows="slots" kind="slots" />
-      <p>
-        <L
-          zh="打开时焦点移入对话框并被限制在其中，关闭后回到原触发元素；页面滚动被锁定。"
-          en="Focus moves in and is trapped while open, then returns to the opener on close; page scroll is locked."
-        />
-      </p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

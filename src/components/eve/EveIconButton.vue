@@ -2,7 +2,7 @@
 <!--
   EveIconButton — borderless 16px icon button.
   Secondary text → highlighted on hover; a 22×4px glow bar fades in under the icon (alpha 0 → 0.3);
-  press flashes the icon to #EAEAEA for 150ms. `active` = toggled state in primary.
+  press flashes the icon to #B4BEC2 for 150ms. `active` = toggled state in primary.
   Docs/tests can force a state with data-eve-state="hover|press|focus".
   Requires: lib/utils.ts
 -->

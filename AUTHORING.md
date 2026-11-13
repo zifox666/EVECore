@@ -24,7 +24,7 @@ Reference implementations to copy the pattern from:
 - Forced states for docs: every interactive component also honours `data-eve-state="hover|press|focus"` on its root
   (write selectors as `:is(:hover, [data-eve-state='hover'])`, `:is(.is-pressed, [data-eve-state='press'])`,
   `:is(:focus-visible, [data-eve-state='focus'])`), so pages can show a static state matrix. Mention it in the header comment.
-- Every interactive part defines Normal / Hover / Press. Press = instant `--eve-bg-press` (#EAEAEA) flash with
+- Every interactive part defines Normal / Hover / Press. Press = instant `--eve-bg-press` (#B4BEC2) flash with
   `--eve-text-on-press` text, released after 150ms (`usePressFlash`). Disabled = normal face + `--eve-text-disabled`, no hover.
 - Geometry: square corners. Cut corners only on buttons and select triggers (use `EveFrame` or its `data-cut` CSS).
   No `box-shadow` drop shadows; glow (`0 0 6px`) only on active/hover/selected.

@@ -11,7 +11,7 @@ import { DemoGroup } from '@/docs/kit';
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '右侧内容', en: 'Trailing content' }" :hint="{ zh: '计数与小图标', en: 'Counts and small icons' }" :row="false">
+  <DemoGroup :label="{ zh: '右侧内容', en: 'Trailing content' }" :row="false">
     <div class="col">
       <EveSectionTitle>
         Skill queue

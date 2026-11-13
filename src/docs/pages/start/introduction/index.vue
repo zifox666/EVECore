@@ -92,8 +92,8 @@ export default defineConfig({
     <DocSection id="licence" zh="许可" en="Licence">
       <p>
         <L
-          zh="代码以 MIT 许可发布。EVE Online 与 EVE Sans Neue 字体属于 CCP Games，本项目不分发该字体；EVE 图标来自 eve-icons（CCP 客户端图标的 SVG 描摹），按 CCP 第三方开发者许可使用。本项目与 CCP 无关。"
-          en="Code is under the MIT License. EVE Online and the EVE Sans Neue typeface belong to CCP Games; the typeface is not distributed. The EVE icons come from eve-icons (SVG tracings of CCP client icons) and are used under the CCP third-party developer licence. This project is not affiliated with CCP."
+          zh="代码以 MIT 许可发布，仅涵盖本仓库自己的代码。EVE Online、EVE Sans Neue 字体及 EVE 图标的权利归 CCP Games 所有，本项目不授予任何相关许可；使用前请自行确认授权。本项目与 CCP 无关。"
+          en="Code is MIT-licensed and covers this repository's own code only. EVE Online, the EVE Sans Neue typeface and the EVE icons belong to CCP Games; this project grants no rights to them, so confirm your own permission before use. Not affiliated with CCP."
         />
       </p>
     </DocSection>

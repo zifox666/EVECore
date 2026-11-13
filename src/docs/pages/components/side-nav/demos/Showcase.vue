@@ -53,23 +53,23 @@ const edgeKey = ref('g1');
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '展开与折叠', en: 'Expanded and collapsed' }" :hint="{ zh: '折叠后悬停看名称', en: 'Collapsed shows names on hover' }" :row="false">
+  <DemoGroup :label="{ zh: '展开与折叠', en: 'Expanded and collapsed' }" :row="false">
     <div class="side">
       <div class="box w220"><EveSideNav v-model="key" :items="items" /></div>
       <div class="box w64"><EveSideNav v-model="collapsedKey" :items="items" collapsed /></div>
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '折叠切换', en: 'Toggle' }" :hint="{ zh: '宽度 200ms 过渡', en: 'Width animates in 200ms' }" :row="false">
+  <DemoGroup :label="{ zh: '折叠切换', en: 'Toggle' }" :row="false">
     <button class="toggle eve-detail" @click="collapsed = !collapsed">{{ collapsed ? 'expand' : 'collapse' }}</button>
     <div class="box" style="height: 220px; margin-top: 8px; width: fit-content"><EveSideNav v-model="key" :items="items" :collapsed="collapsed" /></div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :hint="{ zh: 'normal · hover · press · focus · selected', en: 'normal · hover · press · focus · selected' }" :row="false">
+  <DemoGroup :label="{ zh: '状态', en: 'States' }" :row="false">
     <div class="box w220"><EveSideNav v-model="stateKey" :items="stateItems" /></div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }" :hint="{ zh: '长标签 · 图标类 · 无图标 · 嵌套', en: 'Long label · icon class · no icon · nested' }" :row="false">
+  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }" :row="false">
     <div class="box w220"><EveSideNav v-model="edgeKey" :items="edge" /></div>
   </DemoGroup>
 </template>

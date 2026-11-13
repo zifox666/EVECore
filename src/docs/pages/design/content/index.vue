@@ -38,8 +38,6 @@ const css = `.num { font-family: var(--eve-font-mono); font-variant-numeric: tab
     </DocSection>
 
     <DocSection id="no-helper" zh="不写辅助文本" en="No helper text">
-      <p><L zh="界面只留标签、数据和简短状态（如“暂无挂单”）。功能介绍、操作说明、使用引导、数据口径备注、表头解释 tooltip、placeholder 举例、“（可多选）”之类的括号补充，一律不写。设计稿与实现都适用。"
-            en="The UI keeps labels, data and short states (such as “No orders”). No feature intros, instructions, onboarding, data-definition notes, header-explaining tooltips, example placeholders or parenthetical hints like “(multi-select)”. Applies to mocks and implementation alike." /></p>
       <div class="pair">
         <div class="ex good">
           <span class="tag eve-detail"><span class="i-tabler-check ok" /> <L zh="好" en="Good" /></span>
@@ -57,7 +55,6 @@ const css = `.num { font-family: var(--eve-font-mono); font-variant-numeric: tab
     </DocSection>
 
     <DocSection id="numbers" zh="数字格式" en="Number formatting">
-      <p><L zh="ISK、价格、数量一律等宽、千分位、右对齐。涨跌只改文字色并前置 ▲▼，不加底色。" en="ISK, prices and quantities are mono, thousands-separated and right-aligned. Gain and loss colour the text and prefix ▲▼; never a fill." /></p>
       <div class="tbl-wrap">
         <table class="tbl">
           <thead><tr><th><L zh="物品" en="Item" /></th><th class="r"><L zh="价格" en="Price" /></th><th class="r"><L zh="涨跌" en="Change" /></th></tr></thead>
@@ -80,7 +77,6 @@ const css = `.num { font-family: var(--eve-font-mono); font-variant-numeric: tab
         <span class="eve-label-caps eve-text-success">Online</span>
         <span class="eve-label-caps eve-text-primary">Docked</span>
       </div>
-      <p><L zh="大写只给 HIGHSEC、ONLINE 这样的短标签，配 0.5px 字距；句子与标题不大写。" en="Caps only for short labels such as HIGHSEC or ONLINE, with 0.5px tracking; never sentences or headings." /></p>
     </DocSection>
 
     <DocSection id="language" zh="中英文" en="Chinese and English">

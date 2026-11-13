@@ -15,7 +15,7 @@ EVE 的界面读起来像一艘飞船的舰载终端，而不是一个网站：*
 - 唯一强调色：`{colors.primary}`（#58A7BF Cryo Blue）。用于激活边框、选中态、滑块、复选框、焦点光晕。
 - 文字是**白色 + 透明度**分级，不是灰色分级：高亮 90% / 主文本 75% / 次要 50% / 禁用 30%。
 - 几何是直角 + 切角，圆角最大 6px（仅 Pill 标签）。
-- 交互反馈是"**亮起来**"：hover 时背景变亮、边框变亮、出现辉光；press 时瞬间变成近白色（#EAEAEA）然后回落。
+- 交互反馈是"**亮起来**"：hover 时背景变亮、边框变亮、出现辉光；press 时瞬间变成近白色（#B4BEC2）然后回落。
 - 高密度：基础字号 14px、表格行距 2px、控件高 32px。这是一个工具，不是营销页。
 - 深色唯一：EVE 没有浅色模式。以深色为默认且主推，浅色仅作为可选降级（见 Known Gaps）。
 
@@ -44,7 +44,7 @@ EVE 的界面读起来像一艘飞船的舰载终端，而不是一个网站：*
 | `{colors.bg-primary-light}`     | `#36525E` | 主按钮 hover、Tab 计数徽标        |
 | `{colors.bg-selected}`          | `#355866` | 列表/表格选中行                   |
 | `{colors.bg-hovered}`           | `#131C1F` | 列表行 hover                      |
-| `{colors.bg-press}`             | `#EAEAEA` | 按下瞬间的闪白                    |
+| `{colors.bg-press}`             | `#B4BEC2` | 按下瞬间的闪白                    |
 | `{colors.border-primary}`       | `#41707F` | 主按钮边框、激活窗口顶线          |
 | `{colors.border-primary-dark}`  | `#213841` | 次按钮边框                        |
 | `{colors.border-primary-light}` | `#71BED3` | hover 边框、输入光标              |
@@ -245,9 +245,9 @@ EVE **不用投影表达层级**。层级手段按优先级：
 
 | 类型          | Normal 底/边          | Hover 底/边           | Press 底/边                         |
 | ------------- | --------------------- | --------------------- | ----------------------------------- |
-| **Primary**   | `#172327` / `#41707F` | `#36525E` / `#71BED3` | `#EAEAEA` / `#EAEAEA`（文字变深色） |
-| **Secondary** | 透明 / `#213841`      | `#36525E` / `#71BED3` | `#EAEAEA` / `#EAEAEA`               |
-| **Negative**  | 透明 / `#60171A`      | `#7F2628` / `#FE5B61` | `#EAEAEA` / `#EAEAEA`               |
+| **Primary**   | `#172327` / `#41707F` | `#36525E` / `#71BED3` | `#B4BEC2` / `#B4BEC2`（文字变深色） |
+| **Secondary** | 透明 / `#213841`      | `#36525E` / `#71BED3` | `#B4BEC2` / `#B4BEC2`               |
+| **Negative**  | 透明 / `#60171A`      | `#7F2628` / `#FE5B61` | `#B4BEC2` / `#B4BEC2`               |
 
 - Press 的"闪白"是 EVE 按钮手感的核心，持续时间短（按下即白，松开 ~150ms 回落）。
 - 可选切角：右下（默认）/ 左下 / 两边 / 无。按钮组最左按钮用左下切，最右用右下切。
@@ -270,7 +270,7 @@ EVE **不用投影表达层级**。层级手段按优先级：
 
 ### Checkbox / Radio
 
-- 复选框 16px，四角 2px 切角，1px `{colors.border-grey-light}`；hover 时边框和外圈 2px 光晕变 `{colors.primary}`；press 时底变 `#EAEAEA`；勾选图标 `{colors.primary}`。
+- 复选框 16px，四角 2px 切角，1px `{colors.border-grey-light}`；hover 时边框和外圈 2px 光晕变 `{colors.primary}`；press 时底变 `#B4BEC2`；勾选图标 `{colors.primary}`。
 - Radio 同理，用圆形。
 
 ### Slider
@@ -413,6 +413,6 @@ EVE **不用投影表达层级**。层级手段按优先级：
 
 ## Known Gaps
 
-- **字体与图标版权**：EVE Sans Neue、Triglavian 字体以及 EVE 客户端图标（舰船 bracket、Neocom 图标等）属于 CCP Games。使用 Barlow 替代字体。界面图标优先用 [eve-icons](https://github.com/Incomplete-Infinity/eve-icons)（CCP 客户端图标的 SVG 描摹，按 CCP 第三方开发者许可使用），放在 `web/src/assets/svg-icon/eve/`，已转为 `currentColor`，统一 16px 单色；没有对应 EVE 图标的通用控件（搜索、刷新、关闭）才用 Iconify 线性图标（`tabler` / `carbon`）。若使用 EVE 图片服务器（`images.evetech.net`）的舰船/物品图标，遵守 CCP 的第三方开发者许可。
+- **字体与图标版权**：EVE Sans Neue、Triglavian 字体以及 EVE 客户端图标（舰船 bracket、Neocom 图标等）属于 CCP Games。使用 Barlow 替代字体。界面图标优先用 [eve-icons](https://github.com/Incomplete-Infinity/eve-icons)（CCP 客户端图标的 SVG 描摹；上游无许可证，使用前请自行确认授权），放在 `web/src/assets/svg-icon/eve/`，已转为 `currentColor`，统一 16px 单色；没有对应 EVE 图标的通用控件（搜索、刷新、关闭）才用 Iconify 线性图标（`tabler` / `carbon`）。若使用 EVE 图片服务器（`images.evetech.net`）的舰船/物品图标，遵守 CCP 的第三方开发者许可。
 - **浅色模式**：EVE 没有浅色主题。SoybeanAdmin 现有的浅色切换建议保留但不作为设计目标；若保留，仅做"反相可读"保证，不追求 EVE 风格。可考虑直接隐藏主题切换按钮。
 - **中文排版**：中文字号与英文同级，但中文不加 0.5px 字距。

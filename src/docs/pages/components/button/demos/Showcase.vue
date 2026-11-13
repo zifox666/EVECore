@@ -17,18 +17,18 @@ const variants = ['primary', 'secondary', 'negative'] as const;
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '类型', en: 'Variants' }" :hint="{ zh: '试试按下', en: 'Try pressing' }">
+  <DemoGroup :label="{ zh: '类型', en: 'Variants' }">
     <EveButton variant="primary" icon="i-eve-station">Undock</EveButton>
     <EveButton icon="i-eve-map">Set Destination</EveButton>
     <EveButton variant="negative" icon="i-eve-terminate">Self Destruct</EveButton>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '加载中', en: 'Loading' }" :hint="{ zh: '加载时忽略点击', en: 'Clicks while busy are ignored' }">
+  <DemoGroup :label="{ zh: '加载中', en: 'Loading' }">
     <EveButton variant="primary" icon="i-tabler-rocket" :loading="loading" @click="warp">Warp to 0</EveButton>
     <span class="eve-detail eve-text-secondary eve-num">{{ warps }} warps</span>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '切角', en: 'Cuts' }" :hint="{ zh: '按钮组：左 bl · 中 none · 右 br', en: 'Groups: bl · none · br' }">
+  <DemoGroup :label="{ zh: '切角', en: 'Cuts' }">
     <EveButton cut="br">br</EveButton>
     <EveButton cut="bl">bl</EveButton>
     <EveButton cut="both">both</EveButton>
@@ -41,7 +41,7 @@ const variants = ['primary', 'secondary', 'negative'] as const;
     </span>
   </DemoGroup>
 
-  <DemoGroup v-for="v in variants" :key="v" :label="{ zh: `${v} 状态（静态）`, en: `${v} states (static)` }">
+  <DemoGroup v-for="v in variants" :key="v" :label="{ zh: `${v} 状态`, en: `${v} states` }">
     <EveButton v-for="s in states" :key="s" :variant="v" :data-eve-state="s === 'normal' ? undefined : s">{{ s }}</EveButton>
     <EveButton :variant="v" loading>loading</EveButton>
     <EveButton :variant="v" disabled>disabled</EveButton>

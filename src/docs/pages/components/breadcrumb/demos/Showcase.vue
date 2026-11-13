@@ -7,11 +7,11 @@ const states = ['hover', 'press', 'focus'] as const;
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '基础', en: 'Basic' }" :hint="{ zh: '末项为当前页', en: 'Last item is current' }">
+  <DemoGroup :label="{ zh: '基础', en: 'Basic' }">
     <EveBreadcrumb :items="here" />
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '链接状态（静态）', en: 'Link states (static)' }" :hint="{ zh: 'normal · hover · press · focus', en: 'normal · hover · press · focus' }">
+  <DemoGroup :label="{ zh: '链接状态', en: 'Link states' }">
     <EveBreadcrumb :items="[{ label: 'normal', href: '#' }, { label: 'end' }]" />
     <EveBreadcrumb v-for="s in states" :key="s" :items="[{ label: s, href: '#', state: s }, { label: 'end' }]" />
   </DemoGroup>
@@ -21,7 +21,7 @@ const states = ['hover', 'press', 'focus'] as const;
     <EveBreadcrumb :items="[{ label: 'Wallet' }]" />
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '很长的路径', en: 'Long path' }" :hint="{ zh: '放不下就换行', en: 'Wraps when tight' }" :row="false">
+  <DemoGroup :label="{ zh: '很长的路径', en: 'Long path' }" :row="false">
     <div style="max-width: 300px">
       <EveBreadcrumb
         :items="[

@@ -37,12 +37,12 @@ const tightTabs = [
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '基础', en: 'Basic' }" :hint="{ zh: '方向键 · Home/End', en: 'Arrows · Home/End' }" :row="false">
+  <DemoGroup :label="{ zh: '基础', en: 'Basic' }" :row="false">
     <EveTabs v-model="tab" :tabs="tabs" />
     <p class="eve-detail eve-text-secondary" style="margin: 8px 0 0">{{ tab }}</p>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '宽内边距与图标类', en: 'Wide and icon classes' }" :hint="{ zh: 'i- 前缀走类名', en: 'i- prefix = class' }" :row="false">
+  <DemoGroup :label="{ zh: '宽内边距与图标类', en: 'Wide and icon classes' }" :row="false">
     <EveTabs
       v-model="wide"
       wide
@@ -54,19 +54,19 @@ const tightTabs = [
     />
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :hint="{ zh: 'normal · hover · press · focus · selected · disabled', en: 'normal · hover · press · focus · selected · disabled' }" :row="false">
+  <DemoGroup :label="{ zh: '状态', en: 'States' }" :row="false">
     <EveTabs v-model="staticTab" :tabs="stateTabs" />
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '溢出：选中项始终可见', en: 'Overflow: selected stays visible' }" :hint="{ zh: '300px，选中最后一项', en: '300px, last tab selected' }" :row="false">
+  <DemoGroup :label="{ zh: '溢出：选中项始终可见', en: 'Overflow: selected stays visible' }" :row="false">
     <div style="width: 300px; max-width: 100%"><EveTabs v-model="manyTab" :tabs="many" /></div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '更窄', en: 'Narrower' }" :hint="{ zh: '至少保留一个标签 + 按钮', en: 'At least one tab + the button' }" :row="false">
+  <DemoGroup :label="{ zh: '更窄', en: 'Narrower' }" :row="false">
     <div style="width: 160px; max-width: 100%"><EveTabs v-model="manyFirst" :tabs="many" /></div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '超长标签', en: 'Long label' }" :hint="{ zh: '第一项就放不下', en: 'First tab alone is too wide' }" :row="false">
+  <DemoGroup :label="{ zh: '超长标签', en: 'Long label' }" :row="false">
     <div style="width: 240px; max-width: 100%"><EveTabs v-model="tight" :tabs="tightTabs" /></div>
   </DemoGroup>
 </template>

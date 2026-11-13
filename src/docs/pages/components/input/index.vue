@@ -34,13 +34,6 @@ const props: PropRow[] = [
     <DocSection id="usage" zh="用法" en="Usage">
       <CodeBlock :code="usage" />
       <PropsTable :rows="props" />
-      <p><L zh="class、style 与 data-eve-state 作用于根元素，其余 attribute（name、autocomplete、事件…）透传到原生 <input>。" en="class, style and data-eve-state apply to the root; other attributes (name, autocomplete, events…) fall through to the native <input>." /></p>
-      <p>
-        <L
-          zh="文档与测试可用 data-eve-state=&quot;hover|focus&quot; 强制显示某个状态。"
-          en="Docs and tests can force a state with data-eve-state=&quot;hover|focus&quot;."
-        />
-      </p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

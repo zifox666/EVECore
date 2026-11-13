@@ -7,7 +7,7 @@ const forced = ref(true);
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '尺寸', en: 'Sizes' }" :hint="{ zh: 'full 48px · small 32px', en: 'full 48px · small 32px' }" :row="false">
+  <DemoGroup :label="{ zh: '尺寸', en: 'Sizes' }" :row="false">
     <div class="grid">
       <EvePanel title="Wallet" icon="wallet">
         <template #actions><button aria-label="Close"><span class="i-tabler-x" /></button></template>
@@ -20,21 +20,21 @@ const forced = ref(true);
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '自动激活', en: 'Automatic active' }" :hint="{ zh: '点击内部或外部', en: 'Click inside or outside' }" :row="false">
+  <DemoGroup :label="{ zh: '自动激活', en: 'Automatic active' }" :row="false">
     <div class="grid">
       <EvePanel title="Assets" icon="assets" size="small">Tritanium x 1,200,000</EvePanel>
       <EvePanel title="Market" icon="market" size="small">Jita 4-4 Caldari Navy Assembly Plant</EvePanel>
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :hint="{ zh: 'active=false · active=true', en: 'active=false · active=true' }" :row="false">
+  <DemoGroup :label="{ zh: '状态', en: 'States' }" :row="false">
     <div class="grid">
       <EvePanel title="Inactive" icon="info" :active="false">Normal border, dim dots</EvePanel>
       <EvePanel title="Active" icon="info" :active="forced">Top line, glow, bright dots</EvePanel>
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '透明', en: 'Transparent' }" :hint="{ zh: '用于星图浮层', en: 'Floating over the map' }" :row="false">
+  <DemoGroup :label="{ zh: '透明', en: 'Transparent' }" :row="false">
     <div class="map">
       <EvePanel title="Perimeter" icon="map" size="small" transparent :active="false" style="max-width: 260px">Jita · 0.9 · 14 jumps</EvePanel>
     </div>

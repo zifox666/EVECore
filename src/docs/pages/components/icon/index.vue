@@ -32,15 +32,10 @@ const props: PropRow[] = [
     </DocSection>
 
     <DocSection id="usage" zh="用法" en="Usage">
-      <p><L zh="固定图标用 UnoCSS 类名，只会打包用到的图标。需要在 uno.config.ts 注册 eve 集合：" en="For fixed icons use the UnoCSS class — only the icons you use are shipped. Register the eve collection in uno.config.ts:" /></p>
       <CodeBlock :code="unoSnippet" lang="ts" />
       <CodeBlock :code="usageStatic" lang="html" />
-      <p><L zh="名称来自数据（路由、配置）时用 EveIcon：" en="When the name comes from data (routes, config), use EveIcon:" /></p>
       <CodeBlock :code="usageDynamic" lang="html" />
       <PropsTable :rows="props" />
-      <p><L zh="没有 title 时图标是装饰性的（aria-hidden）；图标单独出现、没有相邻文字时必须设置 title。" en="Without a title the icon is decorative (aria-hidden); when it stands alone with no adjacent text, always set a title." /></p>
-      <p><L zh="每个实例会给内部的 clipPath / mask id 加唯一前缀，同页多个图标不会冲突。" en="Each instance prefixes its internal clipPath / mask ids, so many icons on one page never collide." /></p>
-      <p><L zh="EveIcon 按图标懒加载，首次出现时才请求对应的 SVG。静态类名必须在源码中完整出现，不能拼接。" en="EveIcon lazy-loads each SVG on first use. Static class names must appear literally in source — never concatenated." /></p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

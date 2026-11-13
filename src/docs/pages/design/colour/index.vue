@@ -11,7 +11,7 @@ const window_: Row[] = [
 ];
 const brand: Row[] = [
   ['primary', '#58A7BF'], ['primary-dark', '#41707D'], ['bg-primary', '#172327'], ['bg-primary-dark', '#0A1215'],
-  ['bg-primary-light', '#36525E'], ['bg-selected', '#355866'], ['bg-hovered', '#131C1F'], ['bg-press', '#EAEAEA'],
+  ['bg-primary-light', '#36525E'], ['bg-selected', '#355866'], ['bg-hovered', '#131C1F'], ['bg-press', '#B4BEC2'],
   ['border-primary', '#41707F'], ['border-primary-dark', '#213841'], ['border-primary-light', '#71BED3'],
 ];
 const text: { name: string; value: string; zh: string; en: string }[] = [
@@ -75,10 +75,6 @@ securityColor(-0.3);  // "#8D3163"`;
 
 <template>
   <DocPage>
-    <p>
-      <L zh="点击色块复制对应的 var(--eve-…)。组件只读取变量，不写十六进制；缺少的颜色先查此页再新增。"
-         en="Click a swatch to copy its var(--eve-…). Components read variables only, never hex; check this page before adding a colour." />
-    </p>
     <CodeBlock :code="usage" lang="css" />
 
     <DocSection id="window" zh="窗口" en="Window">
@@ -86,12 +82,10 @@ securityColor(-0.3);  // "#8D3163"`;
     </DocSection>
 
     <DocSection id="brand" zh="品牌与强调" en="Brand and accent">
-      <p><L zh="Cryo Blue 是唯一强调色：留给激活、选中、焦点与主操作，一屏内应当稀缺。" en="Cryo Blue is the only accent: reserved for active, selected, focus and primary action. Keep it scarce on a screen." /></p>
       <div class="grid"><Swatch v-for="[n, h] in brand" :key="n" :name="n" :hex="h" /></div>
     </DocSection>
 
     <DocSection id="text" zh="文字" en="Text">
-      <p><L zh="文字是白色加透明度，不是灰色。下面在 window-bg 上渲染。" en="Text is white plus alpha, not grey. Rendered on window-bg below." /></p>
       <div class="tgrid">
         <button v-for="x in text" :key="x.name" class="tcell" type="button" @click="copyVar(x.name)">
           <span class="tsample" :style="{ color: `var(--eve-${x.name})`, font: 'var(--eve-text-header)' }">{{ t({ zh: x.zh, en: x.en }) }} Jita 4-4</span>
@@ -106,13 +100,10 @@ securityColor(-0.3);  // "#8D3163"`;
     </DocSection>
 
     <DocSection id="semantic" zh="语义色" en="Semantic">
-      <p><L zh="琥珀、黄与安等色是语义色，不是装饰色。涨跌只改文字色，不加底色。" en="Amber, yellow and security colours are semantic, not decorative. Gain and loss colour text only, never a fill." /></p>
       <div class="grid"><Swatch v-for="[n, h] in semantic" :key="n" :name="n" :hex="h" /></div>
     </DocSection>
 
     <DocSection id="security" zh="安等色" en="Security status">
-      <p><L zh="星图与所有星系显示必须使用这 11 档。先四舍五入到 0.1，再取色：0.05 向上进位到 0.1，(0, 0.05) 之间按 0.1 显示，≤ 0 统一用最后一档。"
-            en="The star map and every system display must use these 11 bands. Round to 0.1 first, then pick the colour: 0.05 rounds up to 0.1, anything in (0, 0.05) shows as 0.1, and ≤ 0 shares the last band." /></p>
       <div class="grid"><Swatch v-for="([n, h], i) in secBands" :key="n" :name="secLabel[i]" :v="`--eve-${n}`" :hex="h" /></div>
       <div class="sec-try">
         <label class="eve-detail eve-text-secondary" for="sec-in"><L zh="真实安等" en="True security" /></label>
@@ -125,7 +116,6 @@ securityColor(-0.3);  // "#8D3163"`;
     </DocSection>
 
     <DocSection id="palette" zh="EVE 扩展调色板" en="EVE extended palette">
-      <p><L zh="官方调色板，非日常使用。" en="The official palette; not for everyday UI." /></p>
       <div class="grid"><Swatch v-for="[n, h] in palette" :key="n" :name="n" :hex="h" /></div>
       <div class="grid"><Swatch v-for="[n, h] in greys" :key="n" :name="n" :hex="h" /></div>
     </DocSection>

@@ -43,13 +43,6 @@ const events: PropRow[] = [
       <CodeBlock :code="usage" />
       <PropsTable :rows="props" />
       <PropsTable :rows="events" kind="events" />
-      <p>
-        <L
-          zh="键盘：↑↓ 移动，Home/End 跳转，Enter 选中，→ 打开子菜单，← / Escape 返回或关闭。菜单渲染到 body，点击外部关闭。"
-          en="Keyboard: ↑↓ move, Home/End jump, Enter selects, → opens a submenu, ← / Escape go back or close. Rendered into body; outside click closes."
-        />
-      </p>
-      <p><L zh="item 的 icon 可以是 Iconify 类（i-eve-info）或不带 i- 前缀的 EVE 图标名（info），后者通过 EveIcon 渲染。" en="An item's icon is an Iconify class (i-eve-info) or an EVE icon name without the i- prefix (info), rendered through EveIcon." /></p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

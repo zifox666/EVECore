@@ -43,4 +43,4 @@ pnpm build      # dist/，推送 main 后由 .github/workflows/docs.yml 发布�
 
 ## 许可 / Licence
 
-MIT。EVE Online 与 EVE Sans Neue 字体归 CCP Games 所有，本项目不分发该字体。`src/assets/icons/eve/` 的图标来自 [eve-icons](https://github.com/Incomplete-Infinity/eve-icons)，按 CCP 第三方开发者许可使用（见该目录 README）。本项目与 CCP 无关。
+MIT，仅涵盖本仓库自己的代码。EVE Online、EVE Sans Neue 字体及 `src/assets/icons/eve/` 的图标（来自 [eve-icons](https://github.com/Incomplete-Infinity/eve-icons)）的权利归 CCP Games 所有，本项目不授予任何相关许可，使用前请自行确认授权。本项目与 CCP 无关。

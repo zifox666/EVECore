@@ -34,13 +34,6 @@ const props: PropRow[] = [
     <DocSection id="usage" zh="用法" en="Usage">
       <CodeBlock :code="usage" />
       <PropsTable :rows="props" />
-      <p><L zh="方向键按 step 移动，PageUp / PageDown 移动 10 步，Home / End 跳到端点；press 对应拖动中。" en="Arrows move by step, PageUp / PageDown by 10 steps, Home / End jump to the ends; press means dragging." /></p>
-      <p>
-        <L
-          zh="文档与测试可用 data-eve-state=&quot;hover|press|focus&quot; 强制显示某个状态。"
-          en="Docs and tests can force a state with data-eve-state=&quot;hover|press|focus&quot;."
-        />
-      </p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

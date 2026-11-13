@@ -44,13 +44,13 @@ const anchor = { left: 0, right: 0, top: 0, bottom: 0 };
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '右键面板', en: 'Right-click the panel' }" :hint="{ zh: '悬停子菜单；键盘 ↑↓ → Esc', en: 'Hover the submenu; keys ↑↓ → Esc' }" :row="false">
+  <DemoGroup :label="{ zh: '右键面板', en: 'Right-click the panel' }" :row="false">
     <EveContextMenu :items="items" @select="last = $event">
       <div class="panel">Right-click this ship<br /><span class="eve-detail eve-text-secondary eve-num">selected: {{ last }}</span></div>
     </EveContextMenu>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '菜单（静态）', en: 'Menu (static)' }" :hint="{ zh: 'normal · hover · press · focus · disabled · 子菜单', en: 'normal · hover · press · focus · disabled · submenu' }">
+  <DemoGroup :label="{ zh: '菜单', en: 'Menu' }">
     <EveMenuList :items="staticItems" :anchor="anchor" inline />
   </DemoGroup>
 
@@ -58,7 +58,7 @@ const anchor = { left: 0, right: 0, top: 0, bottom: 0 };
     <div style="max-width: 280px"><EveMenuList :items="longItems" :anchor="anchor" inline /></div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '已禁用', en: 'Disabled' }" :hint="{ zh: '显示浏览器菜单', en: 'Shows the browser menu' }" :row="false">
+  <DemoGroup :label="{ zh: '已禁用', en: 'Disabled' }" :row="false">
     <EveContextMenu :items="items" disabled><div class="panel">Right-click: native menu</div></EveContextMenu>
   </DemoGroup>
 </template>

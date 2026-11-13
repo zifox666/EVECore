@@ -4,9 +4,7 @@ import { DocPage, DocSection, L, Rules } from '../../../kit';
 
 <template>
   <DocPage>
-    <DocSection id="source" zh="来源与许可" en="Source and licence">
-      <p><L zh="EVE 图标集共 144 个，来自 eve-icons（对 CCP 客户端图标的 SVG 描摹），已转为单色 currentColor。图标属于 CCP Games，按 CCP 第三方开发者许可使用；上游仓库没有自己的许可证。" en="The EVE set has 144 icons from eve-icons, SVG traces of the CCP client icons, converted to monochrome currentColor. The icons belong to CCP Games and are used under the CCP third-party developer licence; the upstream repo has no licence of its own." /></p>
-      <p><L zh="Tabler 线性图标只用于没有 EVE 对应物的通用控件。完整图标库与复制类名见组件页 Icon。" en="Tabler line icons are used only for generic controls with no EVE equivalent. The full gallery with copy-to-clipboard is on the Icon component page." /></p>
+    <DocSection id="source" zh="来源" en="Source">
     </DocSection>
 
     <DocSection id="sizes" zh="尺寸" en="Sizes">
@@ -18,13 +16,11 @@ import { DocPage, DocSection, L, Rules } from '../../../kit';
     </DocSection>
 
     <DocSection id="colour" zh="颜色" en="Colour">
-      <p><L zh="图标永远跟随文字颜色：静止 secondary，悬停 highlighted，激活 primary。" en="An icon always follows its text colour: secondary at rest, highlighted on hover, primary when active." /></p>
       <div class="states">
         <span class="s rest"><span class="i-eve-market" /> Market <small class="eve-detail">rest</small></span>
         <span class="s hover"><span class="i-eve-market" /> Market <small class="eve-detail">hover</small></span>
         <span class="s active"><span class="i-eve-market" /> Market <small class="eve-detail">active</small></span>
       </div>
-      <p><L zh="在文字里与按钮里：" en="Inline in text and in a button:" /></p>
       <div class="states">
         <span class="s rest"><span class="i-eve-info" /> <L zh="跳跃距离 4.2 光年" en="Jump range 4.2 ly" /></span>
         <button class="btn" type="button"><span class="i-eve-station" /> Undock</button>
@@ -33,7 +29,6 @@ import { DocPage, DocSection, L, Rules } from '../../../kit';
     </DocSection>
 
     <DocSection id="choosing" zh="EVE 还是 Tabler" en="EVE or Tabler">
-      <p><L zh="先找 EVE 图标；只有没有对应物的通用控件才用 Tabler：" en="Look for an EVE icon first; use Tabler only for generic controls that have no equivalent:" /></p>
       <table class="tbl">
         <thead><tr><th><L zh="用途" en="Purpose" /></th><th><L zh="图标" en="Icon" /></th><th><L zh="类名" en="Class" /></th></tr></thead>
         <tbody>

@@ -4,7 +4,7 @@ import { DemoGroup } from '@/docs/kit';
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '用途', en: 'Uses' }" :hint="{ zh: '悬停变亮', en: 'Hover to brighten' }" :row="false">
+  <DemoGroup :label="{ zh: '用途', en: 'Uses' }" :row="false">
     <div class="grid">
       <div class="eve-glow-host item" style="background: color-mix(in srgb, var(--eve-bg-selected) 40%, transparent)">
         <EveGlowLine absolute active />
@@ -21,13 +21,13 @@ import { DemoGroup } from '@/docs/kit';
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :hint="{ zh: '默认 10% · active 50%', en: 'Default 10% · active 50%' }">
+  <DemoGroup :label="{ zh: '状态', en: 'States' }">
     <div class="eve-glow-host item w"><EveGlowLine absolute /><span>Normal</span></div>
     <div class="eve-glow-host item w"><EveGlowLine absolute active /><span class="eve-text-highlighted">Active</span></div>
     <div class="eve-glow-host item w"><EveGlowLine absolute color="var(--eve-success)" active /><span>Custom colour</span></div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '内联与多行', en: 'Inline and tall' }" :hint="{ zh: '高度跟随内容', en: 'Height follows content' }">
+  <DemoGroup :label="{ zh: '内联与多行', en: 'Inline and tall' }">
     <div class="eve-glow-host" style="display: flex; gap: 8px; max-width: 260px">
       <EveGlowLine active />
       <p style="margin: 0; padding: 4px 0">Station services: Market, Industry, Repair Shop and Clone Bay are available in Jita IV - Moon 4.</p>

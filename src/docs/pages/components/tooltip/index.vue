@@ -37,12 +37,6 @@ const slots: PropRow[] = [
       <CodeBlock :code="usage" />
       <PropsTable :rows="props" />
       <PropsTable :rows="slots" kind="slots" />
-      <p>
-        <L
-          zh="键盘聚焦触发元素时立即出现，Escape 关闭。提示渲染到 body，并通过 aria-describedby 关联。"
-          en="Opens immediately on keyboard focus, Escape closes. Rendered into body and linked with aria-describedby."
-        />
-      </p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

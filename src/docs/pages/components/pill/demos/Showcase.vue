@@ -17,24 +17,24 @@ onMounted(() => {
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '选中', en: 'Selected' }" :hint="{ zh: '点击标签切换', en: 'Click the label to toggle' }">
+  <DemoGroup :label="{ zh: '选中', en: 'Selected' }">
     <EvePill v-for="(on, name) in bands" :key="name" v-model:selected="bands[name]">{{ name }}</EvePill>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '可移除', en: 'Removable' }" :hint="{ zh: '× 触发 remove', en: '× emits remove' }">
+  <DemoGroup :label="{ zh: '可移除', en: 'Removable' }">
     <EvePill v-for="r in regions" :key="r" removable @remove="regions = regions.filter((x) => x !== r)">{{ r }}</EvePill>
     <EvePill v-if="!regions.length">None</EvePill>
     <button v-if="regions.length < 4" class="eve-detail eve-text-secondary" style="background: none; border: 0; cursor: pointer; color: inherit" @click="regions = ['The Forge', 'Domain', 'Sinq Laison', 'Heimatar']">Reset</button>
   </DemoGroup>
 
   <div ref="matrix">
-    <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :hint="{ zh: '普通 · 悬停 · 按下 · 聚焦 · 禁用', en: 'normal · hover · press · focus · disabled' }">
+    <DemoGroup :label="{ zh: '状态', en: 'States' }">
       <EvePill v-for="s in states" :key="s" :data-eve-state="s === 'normal' ? undefined : s">{{ s }}</EvePill>
       <EvePill selected>selected</EvePill>
       <EvePill disabled>disabled</EvePill>
     </DemoGroup>
 
-    <DemoGroup :label="{ zh: '可移除状态（静态）', en: 'Removable states (static)' }" :hint="{ zh: '标签 · × 部分各自独立', en: 'Label and × light up separately' }">
+    <DemoGroup :label="{ zh: '可移除状态', en: 'Removable states' }">
       <EvePill removable>normal</EvePill>
       <EvePill removable data-eve-state="hover">label hover</EvePill>
       <EvePill removable data-force-remove="hover">× hover</EvePill>

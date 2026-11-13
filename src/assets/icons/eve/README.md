@@ -4,8 +4,8 @@
 (`assets/icons/icons/*.svg`, commit `d9e92cc556f4ef5d253d646a750bef3ceb01e216`),
 showcase: https://incomplete-infinity.github.io/eve-icons/
 
-Eve Icons are property of CCP Games, used with permission / under the CCP third-party developer license.
-The upstream repo has no licence of its own.
+Eve Icons are property of CCP Games. The upstream repo has no licence of its own, and EveCore's MIT licence does not
+cover these files; confirm you are permitted to use them before shipping.
 
 ## Conversion
 

@@ -1,6 +1,6 @@
 <!-- SPDX-License-Identifier: MIT -->
 <!--
-  EveRadio — 16px circular radio, same states as EveCheckbox (hover border + 2px primary glow, press flash #EAEAEA).
+  EveRadio — 16px circular radio, same states as EveCheckbox (hover border + 2px primary glow, press flash #B4BEC2).
   Docs/tests can force a state with data-eve-state="hover|press|focus" on the root.
   Must live inside an EveRadioGroup. Only the checked radio is in the tab order (roving focus).
   Requires: EveRadioGroup.vue, lib/utils.ts

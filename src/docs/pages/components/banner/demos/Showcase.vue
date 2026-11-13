@@ -16,7 +16,7 @@ const shown = ref(true);
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '可关闭与操作', en: 'Closable and actions' }" :hint="{ zh: '点击 × 关闭', en: 'Click × to dismiss' }" :row="false">
+  <DemoGroup :label="{ zh: '可关闭与操作', en: 'Closable and actions' }" :row="false">
     <div style="display: grid; gap: 8px">
       <EveBanner v-if="shown" tone="warning" closable @close="shown = false">Cargo hold almost full.</EveBanner>
       <div v-else><EveButton @click="shown = true">Restore banner</EveButton></div>

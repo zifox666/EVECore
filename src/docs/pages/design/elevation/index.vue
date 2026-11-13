@@ -23,7 +23,6 @@ const glass = `.floating {
 
 <template>
   <DocPage>
-    <p><L zh="EVE 不用投影表达层级。手段按优先级：边框、背景明度差、发光。" en="EVE never uses drop shadows for depth. In priority order: borders, tonal steps, glow." /></p>
 
     <DocSection id="levels" zh="五个层级" en="Five levels">
       <div class="stack">
@@ -60,7 +59,6 @@ const glass = `.floating {
     </DocSection>
 
     <DocSection id="glow" zh="发光" en="Glow">
-      <p><L zh="只用于激活、悬停、选中，不作静态装饰。" en="Only for active, hover and selected states; never static decoration." /></p>
       <div class="pair">
         <div class="gbox">static</div>
         <div class="gbox glow">active · 0 0 6px</div>
@@ -68,7 +66,6 @@ const glass = `.floating {
     </DocSection>
 
     <DocSection id="glow-line" zh="竖向发光线" en="Vertical glow line">
-      <p><L zh="列表项左侧 1px 实线加 5px 同色半透明带（默认 10%，悬停/选中 50%）。用于导航选中项、告警条目、敌对标记。" en="A 1px solid line plus a 5px translucent band of the same colour on the left of a list item (10% by default, 50% on hover/selected). For selected nav items, alerts, hostile markers." /></p>
       <div class="pair">
         <div class="vl">Jita</div>
         <div class="vl vl-hover">Perimeter</div>
@@ -78,7 +75,6 @@ const glass = `.floating {
     </DocSection>
 
     <DocSection id="transparent" zh="透明窗口模式" en="Transparent window mode">
-      <p><L zh="星图页的浮动面板用 40% 不透明底，边框 rgba(255,255,255,.1)，backdrop-filter: blur(8px)。" en="Floating panels over the star map use a 40% opaque fill, a rgba(255,255,255,.1) border and backdrop-filter: blur(8px)." /></p>
       <div class="map">
         <div class="glass"><div class="eve-header">Jita</div><div class="eve-mono eve-text-secondary">0.9 · The Forge</div></div>
       </div>

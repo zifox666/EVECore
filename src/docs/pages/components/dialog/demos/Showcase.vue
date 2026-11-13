@@ -11,7 +11,7 @@ const result = ref('—');
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '确认', en: 'Confirm' }" :hint="{ zh: 'Esc、遮罩或 × 关闭', en: 'Esc, scrim or × closes' }">
+  <DemoGroup :label="{ zh: '确认', en: 'Confirm' }">
     <EveButton icon="i-eve-ship-hangar" @click="confirm = true">Scrap Rifter</EveButton>
     <span class="eve-detail eve-text-secondary eve-num">result: {{ result }}</span>
     <EveDialog v-model:open="confirm" title="Scrap Rifter" :width="420">
@@ -23,7 +23,7 @@ const result = ref('—');
     </EveDialog>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '持久', en: 'Persistent' }" :hint="{ zh: '忽略 Esc 与遮罩；只能用按钮关闭', en: 'Ignores Esc and scrim; buttons only' }">
+  <DemoGroup :label="{ zh: '持久', en: 'Persistent' }">
     <EveButton variant="negative" icon="i-eve-terminate" @click="persistent = true">Self Destruct</EveButton>
     <EveDialog v-model:open="persistent" title="Self Destruct" persistent :width="380">
       Your ship will be destroyed in 15 seconds. This cannot be undone.
@@ -34,7 +34,7 @@ const result = ref('—');
     </EveDialog>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '宽窗口与长内容', en: 'Wide with scrolling body' }" :hint="{ zh: '内容区滚动，标题栏固定', en: 'Body scrolls, title bar stays' }">
+  <DemoGroup :label="{ zh: '宽窗口与长内容', en: 'Wide with scrolling body' }">
     <EveButton icon="i-eve-assets" @click="wide = true">View Assets</EveButton>
     <EveDialog v-model:open="wide" title="Assets in Jita IV - Moon 4 - Caldari Navy Assembly Plant" :width="640">
       <p v-for="n in 30" :key="n" style="margin: 0 0 8px">{{ (n * 1250).toLocaleString('en-US') }} units of Tritanium in container {{ n }}</p>

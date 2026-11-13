@@ -40,9 +40,13 @@ const usage = `.title  { font: var(--eve-text-header); color: var(--eve-text-hig
           <span class="big eve-mono">1,284,500.00 ISK</span>
           <span class="eve-mono">0123456789 -0.3 ▲ 12:04:31</span>
         </div>
+        <div class="fam-cell">
+          <span class="eve-detail eve-text-secondary">Triglavian · <L zh="彩蛋装饰" en="Easter egg" /></span>
+          <span class="big" style="font-family: 'Triglavian', var(--eve-font-sans)">Rifter Jita 4-4</span>
+          <span style="font-family: 'Triglavian', var(--eve-font-sans)">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz</span>
+          <a class="fam-link eve-detail" href="https://www.dropbox.com/s/kg0k1m804kbczmm/triglavian-completed.otf?dl=1" target="_blank" rel="noopener noreferrer"><L zh="下载 Triglavian.otf" en="Download Triglavian.otf" /></a>
+        </div>
       </div>
-      <p><L zh="EVE Sans Neue 是 CCP 的资产，不可在 Web 上分发；用 Barlow 替代，中文回退到 HarmonyOS Sans SC / 苹方 / 微软雅黑。数字、ISK、坐标、ID、安等、时间一律等宽并启用 tabular-nums。"
-            en="EVE Sans Neue is a CCP asset and cannot be shipped on the web; Barlow stands in, with HarmonyOS Sans SC / PingFang / YaHei for Chinese. ISK, coordinates, IDs, security and time are always mono with tabular-nums." /></p>
       <CodeBlock :code="stacks" lang="css" />
       <CodeBlock :code="load" lang="html" />
     </DocSection>
@@ -97,6 +101,8 @@ const usage = `.title  { font: var(--eve-text-header); color: var(--eve-text-hig
 
 <style scoped>
 .fam { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px; }
+.fam-link { color: var(--eve-text-external-link); text-decoration: none; align-self: flex-start; }
+.fam-link:hover { text-decoration: underline; }
 .fam-cell { display: flex; flex-direction: column; gap: 4px; padding: 12px; border: 1px solid var(--eve-window-border); background: var(--eve-window-bg); }
 .big { font-size: 24px; color: var(--eve-text-highlighted); }
 .tbl-wrap { overflow-x: auto; border: 1px solid var(--eve-window-border); }

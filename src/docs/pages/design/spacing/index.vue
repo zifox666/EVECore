@@ -39,7 +39,6 @@ const grid = `.workspace {
           <span class="eve-detail eve-text-secondary"><L :zh="s.zh" :en="s.en" /></span>
         </div>
       </div>
-      <p><L zh="没有 48/96px 的大留白。最大常规间距 24px，页面级区块之间用 16–24px。" en="No 48/96px whitespace. The largest routine gap is 24px; use 16–24px between page-level blocks." /></p>
     </DocSection>
 
     <DocSection id="density" zh="密度" en="Density">
@@ -59,7 +58,6 @@ const grid = `.workspace {
         <div class="mi eve-mono">21px</div>
         <div class="rowx eve-mono">22px</div>
       </div>
-      <p><L zh="比通用组件库默认的 34px 更紧凑。移动端触控目标升到 40px，桌面保持高密度。" en="Tighter than the 34px default of generic libraries. Touch targets rise to 40px on mobile; desktop stays dense." /></p>
     </DocSection>
 
     <DocSection id="grid" zh="网格与容器" en="Grid and container">

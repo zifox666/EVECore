@@ -9,7 +9,7 @@ const states = ['normal', 'hover', 'focus'] as const;
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '图标与占位符', en: 'Icon and placeholder' }" :hint="{ zh: '试试输入', en: 'Try typing' }" :row="false">
+  <DemoGroup :label="{ zh: '图标与占位符', en: 'Icon and placeholder' }" :row="false">
     <div style="display: grid; gap: 8px; max-width: 320px">
       <EveInput v-model="pilot" icon="i-eve-character-sheet" placeholder="Pilot name" />
       <EveInput v-model="corp" icon="i-eve-corporation" placeholder="Corporation" />
@@ -24,7 +24,7 @@ const states = ['normal', 'hover', 'focus'] as const;
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '状态（静态）', en: 'States (static)' }" :row="false">
+  <DemoGroup :label="{ zh: '状态', en: 'States' }" :row="false">
     <div style="display: grid; gap: 8px; max-width: 320px">
       <EveInput
         v-for="s in states"
@@ -39,7 +39,7 @@ const states = ['normal', 'hover', 'focus'] as const;
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }" :hint="{ zh: '长文本与窄宽度', en: 'Long text, narrow width' }" :row="false">
+  <DemoGroup :label="{ zh: '边界情况', en: 'Edge cases' }" :row="false">
     <div style="display: grid; gap: 8px; max-width: 320px">
       <EveInput model-value="Caldari Navy Hookbill Blueprint Copy — Researched ME 10 TE 20 — Jita 4-4" icon="i-eve-items" />
       <EveInput model-value="Perimeter" style="max-width: 120px" />

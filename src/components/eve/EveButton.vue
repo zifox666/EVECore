@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT -->
 <!--
   EveButton — 32px, cut bottom-right by default, three variants.
-  Hover lights up (fill + border brighten), press flashes white (#EAEAEA) and falls back after 150ms.
+  Hover lights up (fill + border brighten), press flashes white (#B4BEC2) and falls back after 150ms.
   Docs/tests can force a state with data-eve-state="hover|press|focus".
   Requires: EveFrame.vue (for the .eve-frame cut styles), lib/utils.ts
 -->

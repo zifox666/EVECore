@@ -8,14 +8,14 @@ import { DemoGroup } from '@/docs/kit';
     <div class="col"><EveDivider /></div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '带标签', en: 'With label' }" :hint="{ zh: '居中，detail 字号', en: 'Centred, detail type' }" :row="false">
+  <DemoGroup :label="{ zh: '带标签', en: 'With label' }" :row="false">
     <div class="col">
       <EveDivider label="Tritanium" />
       <EveDivider label="Minerals · Ice · Gas · Moon materials · Planetary commodities" style="max-width: 320px" />
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '竖直', en: 'Vertical' }" :hint="{ zh: '撑满父级高度', en: 'Stretches to parent height' }">
+  <DemoGroup :label="{ zh: '竖直', en: 'Vertical' }">
     <div class="inline">
       <span>Jita</span><EveDivider orientation="vertical" /><span>Amarr</span><EveDivider orientation="vertical" /><span>Dodixie</span>
     </div>

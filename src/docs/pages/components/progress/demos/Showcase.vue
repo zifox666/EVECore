@@ -12,7 +12,7 @@ onBeforeUnmount(() => clearInterval(timer));
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '细条', en: 'Thin (4px)' }" :hint="{ zh: '宽度 600ms 缓动', en: 'Width eases over 600ms' }" :row="false">
+  <DemoGroup :label="{ zh: '细条', en: 'Thin (4px)' }" :row="false">
     <div style="display: grid; gap: 12px; max-width: 420px">
       <EveProgress :value="warp" label="Warp" />
       <EveProgress :value="0.62" label="Shield" />
@@ -21,7 +21,7 @@ onBeforeUnmount(() => clearInterval(timer));
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '双段', en: 'Dual segment' }" :hint="{ zh: 'value + secondary', en: 'value + secondary' }" :row="false">
+  <DemoGroup :label="{ zh: '双段', en: 'Dual segment' }" :row="false">
     <div style="display: grid; gap: 12px; max-width: 420px">
       <EveProgress :value="0.4" :secondary="0.25" label="Cargo" />
       <EveProgress :value="0.55" :secondary="0.7" :height="8" label="Ore Hold (clamped)" />
@@ -35,14 +35,14 @@ onBeforeUnmount(() => clearInterval(timer));
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '不确定', en: 'Indeterminate' }" :hint="{ zh: '时长未知', en: 'Unknown duration' }" :row="false">
+  <DemoGroup :label="{ zh: '不确定', en: 'Indeterminate' }" :row="false">
     <div style="display: grid; gap: 8px; max-width: 420px">
       <EveProgress indeterminate label="Jumping" />
       <EveProgress indeterminate large label="Syncing assets" />
     </div>
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '边界', en: 'Edge cases' }" :hint="{ zh: '0% · 100% · 越界被限制', en: '0% · 100% · out-of-range clamped' }" :row="false">
+  <DemoGroup :label="{ zh: '边界', en: 'Edge cases' }" :row="false">
     <div style="display: grid; gap: 8px; max-width: 420px">
       <EveProgress :value="0" show-value label="Empty" />
       <EveProgress :value="1" show-value label="Full" />

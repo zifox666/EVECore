@@ -38,13 +38,6 @@ const props: PropRow[] = [
     <DocSection id="usage" zh="用法" en="Usage">
       <CodeBlock :code="usage" />
       <PropsTable :rows="props" />
-      <p><L zh="只有选中项在 Tab 顺序内（roving focus）；方向键循环并跳过禁用项。EveRadio 是 Group 的依赖，会被自动解析。" en="Only the checked radio is in the tab order (roving focus); arrows wrap and skip disabled items. EveRadio is a dependency of the group and is resolved automatically." /></p>
-      <p>
-        <L
-          zh="文档与测试可用 data-eve-state=&quot;hover|press|focus&quot; 强制显示某个状态。"
-          en="Docs and tests can force a state with data-eve-state=&quot;hover|press|focus&quot;."
-        />
-      </p>
     </DocSection>
 
     <DocSection id="rules" zh="规则" en="Rules">

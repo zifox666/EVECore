@@ -4,13 +4,13 @@ import { DemoGroup } from '@/docs/kit';
 </script>
 
 <template>
-  <DemoGroup :label="{ zh: '尺寸', en: 'Sizes' }" :hint="{ zh: '16 · 24 · 32', en: '16 · 24 · 32' }">
+  <DemoGroup :label="{ zh: '尺寸', en: 'Sizes' }">
     <EveSpinner :size="16" />
     <EveSpinner :size="24" />
     <EveSpinner :size="32" />
   </DemoGroup>
 
-  <DemoGroup :label="{ zh: '行内', en: 'Inline' }" :hint="{ zh: '跟随文字', en: 'Sits with text' }">
+  <DemoGroup :label="{ zh: '行内', en: 'Inline' }">
     <EveSpinner :size="16" label="Loading market orders" />
     <span class="eve-text-secondary">Loading market orders in Jita…</span>
   </DemoGroup>
