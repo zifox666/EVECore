@@ -1,5 +1,5 @@
 {
-  "name": "evecore",
+  "name": "@newdoublex/evecore",
   "version": "0.1.0",
   "type": "module",
   "description": "EVE Online Neocom-style Vue 3 component library: near-black windows, translucent white text, one touch of Cryo Blue.",

@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { CodeBlock, DocPage, DocSection, L } from '../../../kit';
 
-const npmInstall = `pnpm add evecore`;
+const npmInstall = `pnpm add @newdoublex/evecore`;
 const npmMain = `// main.ts
 import { createApp } from 'vue';
-import EveCore from 'evecore';
-import 'evecore/style.css'; // tokens + base + components (+ the icons they use)
+import EveCore from '@newdoublex/evecore';
+import '@newdoublex/evecore/style.css'; // tokens + base + components (+ the icons they use)
 import App from './App.vue';
 
-createApp(App).use(EveCore).mount('#app'); // or import { EveButton } from 'evecore' per file`;
+createApp(App).use(EveCore).mount('#app'); // or import { EveButton } from '@newdoublex/evecore' per file`;
 const npmUno = `// uno.config.ts — only if you want eve-* utilities and your own i-eve-* icons
-import { presetEvecore } from 'evecore/unocss';
+import { presetEvecore } from '@newdoublex/evecore/unocss';
 
 export default defineConfig({
   presets: [presetWind3(), presetEvecore()], // i-eve-wallet, text-eve-primary, eve-panel …
@@ -42,16 +42,16 @@ export default defineConfig({
     <DocSection id="npm" zh="通过 npm 安装" en="Install from npm">
       <p>
         <L
-          zh="evecore 包含全部组件、类型和一份编译好的样式（组件用到的图标已编进 CSS，不需要 UnoCSS）。"
-          en="The evecore package has every component, its types and one prebuilt stylesheet (the icons the components use are compiled into it; UnoCSS is not required)."
+          zh="@newdoublex/evecore 包含全部组件、类型和一份编译好的样式（组件用到的图标已编进 CSS，不需要 UnoCSS）。"
+          en="The @newdoublex/evecore package has every component, its types and one prebuilt stylesheet (the icons the components use are compiled into it; UnoCSS is not required)."
         />
       </p>
       <CodeBlock :code="npmInstall" lang="bash" />
       <CodeBlock :code="npmMain" lang="ts" />
       <p>
         <L
-          zh="想在自己的模板里用 i-eve-* 图标类和 eve-* 颜色工具类时，再加 UnoCSS 预设 evecore/unocss（依赖 unocss 与 @iconify/utils）。另有 evecore/tokens.css 只含变量。"
-          en="To use i-eve-* icon classes and eve-* colour utilities in your own templates, add the UnoCSS preset evecore/unocss (needs unocss and @iconify/utils). evecore/tokens.css holds the variables alone."
+          zh="想在自己的模板里用 i-eve-* 图标类和 eve-* 颜色工具类时，再加 UnoCSS 预设 @newdoublex/evecore/unocss（依赖 unocss 与 @iconify/utils）。另有 @newdoublex/evecore/tokens.css 只含变量。"
+          en="To use i-eve-* icon classes and eve-* colour utilities in your own templates, add the UnoCSS preset @newdoublex/evecore/unocss (needs unocss and @iconify/utils). @newdoublex/evecore/tokens.css holds the variables alone."
         />
       </p>
       <CodeBlock :code="npmUno" lang="ts" />

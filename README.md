@@ -10,16 +10,16 @@ A Vue 3 component library in the style of the EVE Online Neocom. Install it from
 ## npm
 
 ```bash
-pnpm add evecore
+pnpm add @newdoublex/evecore
 ```
 
 ```ts
-import EveCore from 'evecore';      // app.use(EveCore) 全局注册，或按需 import { EveButton } from 'evecore'
-import 'evecore/style.css';         // tokens + 基础样式 + 组件样式（组件用到的图标已编译进去）
+import EveCore from '@newdoublex/evecore';      // app.use(EveCore) 全局注册，或按需 import { EveButton } from '@newdoublex/evecore'
+import '@newdoublex/evecore/style.css';         // tokens + 基础样式 + 组件样式（组件用到的图标已编译进去）
 ```
 
-- `evecore/unocss`：UnoCSS 预设 `presetEvecore()`，提供 `i-eve-<name>` 图标类、`eve-*` 颜色与 `eve-panel` 等快捷类（需 `unocss`、`@iconify/utils`）。
-- `evecore/tokens.css`：只含 `--eve-*` 变量。`evecore/icons/eve/*.svg`：原始图标。
+- `@newdoublex/evecore/unocss`：UnoCSS 预设 `presetEvecore()`，提供 `i-eve-<name>` 图标类、`eve-*` 颜色与 `eve-panel` 等快捷类（需 `unocss`、`@iconify/utils`）。
+- `@newdoublex/evecore/tokens.css`：只含 `--eve-*` 变量。`@newdoublex/evecore/icons/eve/*.svg`：原始图标。
 - 发布：改 `package.json` 版本后推送 `v<版本>` 标签，`.github/workflows/release.yml` 用仓库 secret `NPM_TOKEN` 发布到 npm。本地构建：`pnpm build:lib`（输出 `dist-lib/`）。
 
 ## 复制源码 / Copy the source

@@ -1,5 +1,5 @@
 name: release
-# Publishes the `evecore` package to npm when a version tag (v1.2.3) is pushed.
+# Publishes the `@newdoublex/evecore` package to npm when a version tag (v1.2.3) is pushed.
 # Needs the repository secret NPM_TOKEN (an npm automation token with publish rights).
 on:
   push:

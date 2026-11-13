@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-// evecore/unocss — UnoCSS preset: eve-* colours, eve-panel / eve-section-title / eve-num shortcuts,
+// @newdoublex/evecore/unocss — UnoCSS preset: eve-* colours, eve-panel / eve-section-title / eve-num shortcuts,
 // and the EVE icon collection as i-eve-<name>.
 //
-//   import { presetEvecore } from 'evecore/unocss';
+//   import { presetEvecore } from '@newdoublex/evecore/unocss';
 //   export default defineConfig({ presets: [presetWind3(), presetIcons(), presetEvecore()] });
 import { fileURLToPath } from 'node:url';
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';

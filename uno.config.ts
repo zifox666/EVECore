@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Docs-site UnoCSS config. Consumers of the npm package use `presetEvecore` from 'evecore/unocss'.
+// Docs-site UnoCSS config. Consumers of the npm package use `presetEvecore` from '@newdoublex/evecore/unocss'.
 import { defineConfig, presetIcons, presetWind3 } from 'unocss';
 import { presetEvecore } from './src/unocss';
 
