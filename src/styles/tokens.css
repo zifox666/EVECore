@@ -1,0 +1,177 @@
+/* SPDX-License-Identifier: MIT
+ * EveCore design tokens — every value in design.md as a CSS variable (prefix --eve-).
+ * Components only read these variables; never inline a new hex value.
+ */
+:root {
+  /* Window */
+  --eve-window-bg: #070707;
+  --eve-window-bg-secondary: #141414;
+  --eve-window-bg-secondary-hover: #1f272b;
+  --eve-window-bg-active: #05080a;
+  --eve-window-border: #1f1f1f;
+  --eve-window-border-active: #1e2022;
+  --eve-map-bg: #0a0e15;
+
+  /* Brand */
+  --eve-primary: #58a7bf;
+  --eve-primary-dark: #41707d;
+  --eve-bg-primary: #172327;
+  --eve-bg-primary-dark: #0a1215;
+  --eve-bg-primary-light: #36525e;
+  --eve-bg-selected: #355866;
+  --eve-bg-hovered: #131c1f;
+  --eve-bg-press: #eaeaea;
+  --eve-border-primary: #41707f;
+  --eve-border-primary-dark: #213841;
+  --eve-border-primary-light: #71bed3;
+
+  /* Text — white + alpha */
+  --eve-text-special: #c3e9ff;
+  --eve-text-highlighted: rgba(255, 255, 255, 0.9);
+  --eve-text-primary: rgba(255, 255, 255, 0.75);
+  --eve-text-secondary: rgba(255, 255, 255, 0.5);
+  --eve-text-disabled: rgba(255, 255, 255, 0.3);
+  --eve-text-on-press: #070707;
+  --eve-text-link: #d98d00;
+  --eve-text-link-hover: #ffb732;
+  --eve-text-external-link: #ffe400;
+  --eve-text-help-link: #94ccff;
+
+  /* Borders */
+  --eve-border-grey-light: #303030;
+  --eve-border-grey: #1e1e1e;
+  --eve-border-grey-dropdown: #1e2022;
+  --eve-divider: #1e2022;
+
+  /* Semantic */
+  --eve-success: #8dc169;
+  --eve-warning: #f39058;
+  --eve-warning-bg: #180f09;
+  --eve-danger: #ff454b;
+  --eve-danger-bg: #1a0809;
+  --eve-error-bg: #7f2628;
+  --eve-error-bg-dark: #60171a;
+  --eve-error-border: #fe5b61;
+  --eve-away: #ffb845;
+  --eve-isk-up: #029c02;
+  --eve-isk-down: #fb0101;
+  --eve-omega: #ffc64a;
+  --eve-plex: #ffcc00;
+
+  /* Dropdown option states */
+  --eve-option-hover: #18262d;
+  --eve-option-selected: #16272e;
+  --eve-option-focus: #273e47;
+
+  /* Slider / progress */
+  --eve-slider-thumb: #58a7bf;
+  --eve-slider-thumb-drag: #99e5ee;
+  --eve-slider-thumb-hover: #ffffff;
+  --eve-progress-track: #1a1e1f;
+  --eve-progress-fill: #0d557e;
+
+  /* Security status */
+  --eve-sec-10: #2c75e1;
+  --eve-sec-09: #399aeb;
+  --eve-sec-08: #4ecef8;
+  --eve-sec-07: #60dba3;
+  --eve-sec-06: #71e754;
+  --eve-sec-05: #f5ff83;
+  --eve-sec-04: #dc6c06;
+  --eve-sec-03: #ce440f;
+  --eve-sec-02: #bb1116;
+  --eve-sec-01: #731f1f;
+  --eve-sec-00: #8d3163;
+
+  /* EVE palette (extended, not everyday) */
+  --eve-burnished-gold: #996a1f;
+  --eve-cherry-red: #991f24;
+  --eve-copper-oxide: #415931;
+  --eve-primary-blue: #407196;
+  --eve-smoke-blue: #305665;
+  --eve-ice-white: #c2e5f2;
+  --eve-leafy-green: #8dc169;
+  --eve-lime: #b2f84d;
+  --eve-aura-purple: #956bec;
+  --eve-air-turquoise: #70f0e3;
+  --eve-ultramarine: #2e4ebe;
+  --eve-paragon: #97d3cb;
+  --eve-destination-yellow: #f0ff45;
+  --eve-coal: #1a1a1a;
+  --eve-matte: #303030;
+  --eve-gunmetal: #4d4d4d;
+  --eve-led: #8a8a8a;
+  --eve-silver: #b0b0b0;
+  --eve-tungsten: #d9d9d9;
+  --eve-platinum: #f2f2f2;
+
+  /* Typography */
+  --eve-font-sans: 'Barlow', 'HarmonyOS Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --eve-font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --eve-text-display: 400 24px / 1.3 var(--eve-font-sans);
+  --eve-text-headline: 400 19px / 1.3 var(--eve-font-sans);
+  --eve-text-header: 400 16px / 1.35 var(--eve-font-sans);
+  --eve-text-body: 400 14px / 1.4 var(--eve-font-sans);
+  --eve-text-body-link: 700 14px / 1.4 var(--eve-font-sans);
+  --eve-text-detail: 400 12px / 1.35 var(--eve-font-sans);
+  --eve-text-detail-bold: 700 12px / 1.35 var(--eve-font-sans);
+  --eve-tracking-detail: 0.5px;
+  --eve-text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  --eve-text-glow: 0 0 3px rgba(255, 255, 255, 0.35);
+
+  /* Spacing */
+  --eve-space-xxs: 2px;
+  --eve-space-xs: 4px;
+  --eve-space-sm: 8px;
+  --eve-space-md: 12px;
+  --eve-space-lg: 16px;
+  --eve-space-xl: 24px;
+
+  /* Shape */
+  --eve-radius-none: 0;
+  --eve-radius-xs: 2px;
+  --eve-radius-sm: 4px;
+  --eve-radius-md: 6px;
+  --eve-cut: 9px;
+
+  /* Density */
+  --eve-control-height: 32px;
+  --eve-menu-item-height: 21px;
+  --eve-option-height: 31px;
+
+  /* Elevation */
+  --eve-overlay-bg: rgba(7, 7, 7, 0.95);
+  --eve-overlay-border: rgba(30, 30, 30, 0.95);
+  --eve-glow-active: 0 0 6px var(--eve-border-primary);
+  --eve-dots: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  --eve-dots-active: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  --eve-dots-size: 4px 4px;
+
+  /* Motion */
+  --eve-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --eve-dur-hover: 150ms;
+  --eve-dur-row: 250ms;
+  --eve-dur-window: 200ms;
+  --eve-dur-progress: 600ms;
+  --eve-dur-page: 150ms;
+  --eve-dur-press-release: 150ms;
+}
+
+@media (max-width: 639px) {
+  :root {
+    --eve-control-height: 40px;
+    --eve-menu-item-height: 40px;
+    --eve-option-height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --eve-dur-hover: 0ms;
+    --eve-dur-row: 0ms;
+    --eve-dur-window: 0ms;
+    --eve-dur-progress: 0ms;
+    --eve-dur-page: 0ms;
+    --eve-dur-press-release: 0ms;
+  }
+}

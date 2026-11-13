@@ -1,0 +1,94 @@
+/* SPDX-License-Identifier: MIT
+ * EveCore base styles. Import once, after tokens.css.
+ */
+@import './tokens.css';
+
+html {
+  color-scheme: dark;
+  background: var(--eve-window-bg);
+}
+
+body {
+  margin: 0;
+  background: var(--eve-window-bg);
+  color: var(--eve-text-primary);
+  font: var(--eve-text-body);
+  text-shadow: var(--eve-text-shadow);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--eve-bg-selected);
+  color: var(--eve-text-highlighted);
+}
+
+:focus-visible {
+  outline: 1px solid var(--eve-border-primary-light);
+  outline-offset: 1px;
+}
+
+/* ---- type utilities ---- */
+.eve-display { font: var(--eve-text-display); color: var(--eve-text-highlighted); }
+.eve-headline { font: var(--eve-text-headline); color: var(--eve-text-highlighted); }
+.eve-header { font: var(--eve-text-header); color: var(--eve-text-highlighted); }
+.eve-body { font: var(--eve-text-body); }
+.eve-detail { font: var(--eve-text-detail); letter-spacing: var(--eve-tracking-detail); }
+.eve-detail-bold { font: var(--eve-text-detail-bold); letter-spacing: var(--eve-tracking-detail); }
+.eve-label-caps { font: var(--eve-text-detail); letter-spacing: var(--eve-tracking-detail); text-transform: uppercase; }
+.eve-num { font-family: var(--eve-font-mono); font-variant-numeric: tabular-nums; }
+.eve-mono { font-family: var(--eve-font-mono); font-variant-numeric: tabular-nums; }
+:lang(zh) .eve-detail,
+:lang(zh) .eve-detail-bold { letter-spacing: 0; }
+
+.eve-text-highlighted { color: var(--eve-text-highlighted); }
+.eve-text-primary { color: var(--eve-text-primary); }
+.eve-text-secondary { color: var(--eve-text-secondary); }
+.eve-text-disabled { color: var(--eve-text-disabled); }
+.eve-text-special { color: var(--eve-text-special); }
+
+/* ---- surfaces ---- */
+.eve-dots {
+  background-image: var(--eve-dots);
+  background-size: var(--eve-dots-size);
+}
+.eve-surface {
+  background-color: var(--eve-window-bg);
+  border: 1px solid var(--eve-window-border);
+}
+.eve-surface-secondary { background-color: var(--eve-window-bg-secondary); }
+.eve-overlay {
+  background: var(--eve-overlay-bg);
+  border: 1px solid var(--eve-overlay-border);
+}
+
+/* ---- corner cuts (no border; use EveFrame for bordered cuts) ---- */
+.eve-cut-br { clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--eve-cut)), calc(100% - var(--eve-cut)) 100%, 0 100%); }
+.eve-cut-bl { clip-path: polygon(0 0, 100% 0, 100% 100%, var(--eve-cut) 100%, 0 calc(100% - var(--eve-cut))); }
+.eve-cut-both {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--eve-cut)), calc(100% - var(--eve-cut)) 100%, var(--eve-cut) 100%, 0 calc(100% - var(--eve-cut)));
+}
+
+/* ---- scrollbar ---- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--eve-border-grey-light) transparent;
+}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--eve-border-grey-light); }
+::-webkit-scrollbar-thumb:hover { background: var(--eve-border-primary); }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}

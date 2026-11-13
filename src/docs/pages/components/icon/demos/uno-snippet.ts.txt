@@ -1,0 +1,14 @@
+// uno.config.ts
+import { defineConfig, presetIcons, presetWind3 } from 'unocss';
+import { FileSystemIconLoader } from 'unplugin-icons/loaders';
+
+export default defineConfig({
+  presets: [
+    presetWind3(),
+    presetIcons({
+      extraProperties: { display: 'inline-block', 'vertical-align': 'middle' },
+      // i-eve-<name>  ->  ./src/assets/icons/eve/<name>.svg
+      collections: { eve: FileSystemIconLoader('./src/assets/icons/eve') },
+    }),
+  ],
+});

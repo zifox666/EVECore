@@ -1,0 +1,10 @@
+export { default as DocPage } from './DocPage.vue';
+export { default as DocSection } from './DocSection.vue';
+export { default as Demo } from './Demo.vue';
+export { default as CodeBlock } from './CodeBlock.vue';
+export { default as PropsTable } from './PropsTable.vue';
+export type { PropRow } from './PropsTable.vue';
+export { default as Install } from './Install.vue';
+export { default as Rules } from './Rules.vue';
+export { L, t } from '../i18n';
+export { default as DemoGroup } from './DemoGroup.vue';
